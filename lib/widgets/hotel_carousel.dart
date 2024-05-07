@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel_ui/models/hotel_model.dart';
 
 class HotelCarousel extends StatelessWidget {
+
+  const HotelCarousel({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text(
+              const Text(
                 'Exclusive Hotels',
                 style: TextStyle(
                   fontSize: 22.0,
@@ -20,7 +23,7 @@ class HotelCarousel extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () => print('See All'),
+                onTap: () => {},
                 child: Text(
                   'See All',
                   style: TextStyle(
@@ -34,21 +37,23 @@ class HotelCarousel extends StatelessWidget {
             ],
           ),
         ),
-        Container(
+        SizedBox(
           height: 300.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: hotels.length,
             itemBuilder: (BuildContext context, int index) {
+
               Hotel hotel = hotels[index];
+
               return Container(
-                margin: EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(10.0),
                 width: 240.0,
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: <Widget>[
                     Positioned(
-                      bottom: 15.0,
+                      bottom: 0.0,
                       child: Container(
                         height: 120.0,
                         width: 240.0,
@@ -57,29 +62,29 @@ class HotelCarousel extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: <Widget>[
                               Text(
                                 hotel.name,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 22.0,
                                   fontWeight: FontWeight.w600,
                                   letterSpacing: 1.2,
                                 ),
                               ),
-                              SizedBox(height: 2.0),
+                              const SizedBox(height: 2.0),
                               Text(
                                 hotel.address,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.grey,
                                 ),
                               ),
-                              SizedBox(height: 2.0),
+                              const SizedBox(height: 2.0),
                               Text(
                                 '\$${hotel.price} / night',
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -93,7 +98,7 @@ class HotelCarousel extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20.0),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             color: Colors.black26,
                             offset: Offset(0.0, 2.0),

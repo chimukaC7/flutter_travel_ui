@@ -9,7 +9,7 @@ class DestinationCarousel extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -22,7 +22,7 @@ class DestinationCarousel extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () => print('See All'),
+                onTap: () => {},
                 child: Text(
                   'See All',
                   style: TextStyle(
@@ -42,7 +42,9 @@ class DestinationCarousel extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: destinations.length,
             itemBuilder: (BuildContext context, int index) {
+
               Destination destination = destinations[index];
+
               return GestureDetector(
                 onTap: () => Navigator.push(
                   context,
@@ -59,7 +61,7 @@ class DestinationCarousel extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     children: <Widget>[
                       Positioned(
-                        bottom: 15.0,
+                        bottom: 0.0,
                         child: Container(
                           height: 120.0,
                           width: 200.0,
@@ -118,6 +120,9 @@ class DestinationCarousel extends StatelessWidget {
                                 ),
                               ),
                             ),
+
+
+                            //words in top of the image
                             Positioned(
                               left: 10.0,
                               bottom: 10.0,
@@ -133,6 +138,8 @@ class DestinationCarousel extends StatelessWidget {
                                       letterSpacing: 1.2,
                                     ),
                                   ),
+
+                                  //destination country
                                   Row(
                                     children: <Widget>[
                                       const Icon(

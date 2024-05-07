@@ -4,8 +4,11 @@ import 'package:flutter_travel_ui/widgets/hotel_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
+
+  const HomeScreen({super.key});
+
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -32,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           color: _selectedIndex == index
               ? Theme.of(context).hintColor
               : const Color(0xFFE7EBEE),
-          borderRadius: BorderRadius.circular(30.0),
+          // borderRadius: BorderRadius.circular(30.0),
         ),
         child: Icon(
           _icons[index],
@@ -65,18 +68,14 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 20.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: _icons
-                  .asMap()
-                  .entries
-                  .map(
-                    (MapEntry map) => _buildIcon(map.key),
-                  )
+              children: _icons.asMap().entries
+                  .map((MapEntry map) => _buildIcon(map.key),)
                   .toList(),
             ),
             const SizedBox(height: 20.0),
             DestinationCarousel(),
             const SizedBox(height: 20.0),
-            HotelCarousel(),
+            const HotelCarousel(),
           ],
         ),
       ),
@@ -107,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: CircleAvatar(
               radius: 15.0,
-              backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'),
+              backgroundImage: NetworkImage('https://i.imgur.com/zL4Krbz.jpg'),
             ),
             // title: SizedBox.shrink(),
             label: "",
