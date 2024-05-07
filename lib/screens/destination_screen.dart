@@ -61,6 +61,8 @@ class _DestinationScreenState extends State<DestinationScreen> {
                 ),
               ),
 
+
+              //APP BAR REPLACEMENT
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 40.0),
                 child: Row(
@@ -91,6 +93,9 @@ class _DestinationScreenState extends State<DestinationScreen> {
                   ],
                 ),
               ),
+
+
+              //image caption
               Positioned(
                 left: 20.0,
                 bottom: 20.0,
@@ -126,6 +131,8 @@ class _DestinationScreenState extends State<DestinationScreen> {
                   ],
                 ),
               ),
+
+              //image icon
               const Positioned(
                 right: 20.0,
                 bottom: 20.0,
@@ -137,12 +144,16 @@ class _DestinationScreenState extends State<DestinationScreen> {
               ),
             ],
           ),
+
+
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.only(top: 10.0, bottom: 15.0),
               itemCount: widget.destination.activities.length,
               itemBuilder: (BuildContext context, int index) {
+
                 Activity activity = widget.destination.activities[index];
+
                 return Stack(
                   children: <Widget>[
                     Container(
