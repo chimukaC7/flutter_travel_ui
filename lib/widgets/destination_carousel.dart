@@ -4,6 +4,9 @@ import 'package:flutter_travel_ui/screens/destination_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DestinationCarousel extends StatelessWidget {
+
+  const DestinationCarousel({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,7 +39,7 @@ class DestinationCarousel extends StatelessWidget {
             ],
           ),
         ),
-        Container(
+        SizedBox(
           height: 300.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,

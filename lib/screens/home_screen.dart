@@ -17,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
-    FontAwesomeIcons.walking,
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.personWalking,
+    FontAwesomeIcons.personBiking,
   ];
 
   Widget _buildIcon(int index) {
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   .toList(),
             ),
             const SizedBox(height: 20.0),
-            DestinationCarousel(),
+            const DestinationCarousel(),
             const SizedBox(height: 20.0),
             const HotelCarousel(),
           ],

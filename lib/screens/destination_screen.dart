@@ -29,6 +29,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Column(
         children: <Widget>[
@@ -77,7 +78,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                           onPressed: () => Navigator.pop(context),
                         ),
                         IconButton(
-                          icon: const Icon(FontAwesomeIcons.sortAmountDown),
+                          icon: const Icon(FontAwesomeIcons.arrowDownWideShort),
                           iconSize: 25.0,
                           color: Colors.black,
                           onPressed: () => Navigator.pop(context),
@@ -159,7 +160,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Container(
+                                SizedBox(
                                   width: 120.0,
                                   child: Text(
                                     activity.name,
